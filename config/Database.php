@@ -1,17 +1,17 @@
 <?php
 
+require '../vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+Dotenv::createImmutable(dirname(__FILE__, 2))->load();
+
 class Database {
-    private $host = getenv('MYSQL_HOSTNAME');
-    private $db_name = getenv('MYSQL_DATABASE');
-    private $username = getenv('MYSQL_ROOT_USER');
-    private $password = getenv('MYSQL_ROOT_PASSWORD');
     public $conn;
 
     public function getConnection() {
-        $this->conn = null;
-        
         try {
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
+            $this->conn = new PDO("mysql:host=" . $_ENV['MYSQL_HOSTNAME'] . ";dbname=" . $_ENV['MYSQL_DATABASE'], $_ENV['MYSQL_ROOT_USER'], $_ENV['MYSQL_ROOT_PASSWORD']);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch(PDOException $exception) {
             echo "Connection error: " . $exception->getMessage();
