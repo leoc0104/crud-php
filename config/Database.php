@@ -1,8 +1,12 @@
 <?php
 
-require '../vendor/autoload.php';
+namespace Database;
 
 use Dotenv\Dotenv;
+use PDO;
+use PDOException;
+
+require '../vendor/autoload.php';
 
 Dotenv::createImmutable(dirname(__FILE__, 2))->load();
 
