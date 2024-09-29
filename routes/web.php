@@ -23,5 +23,6 @@ if ($uri[1] == 'words' && $_SERVER['REQUEST_METHOD'] == 'GET') {
     $controller->destroy($uri[2]);
 } else {
     header("HTTP/1.1 404 Not Found");
+    header('Content-Type: application/json');
     echo json_encode(['message' => 'Route not found']);
 }
