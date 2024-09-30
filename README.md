@@ -38,13 +38,13 @@ It is a project for the *Laboratory III* subject required in the Database progra
 ## Database Schema and Table
 
 ```sql
-CREATE DATABASE dictionary;
+CREATE DATABASE `dictionary`;
 
 CREATE TABLE `words` (
-	`id` 				INT 			PRIMARY KEY AUTO_INCREMENT,
-    `name` 				VARCHAR(20),
-    `translation` 		VARCHAR(20),
-    `subject` 			VARCHAR(20),
-    `context_applied` 	VARCHAR(255)
+	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(20),
+    `translation` VARCHAR(20),
+    `subject` VARCHAR(20),
+    `context_applied` VARCHAR(255)
 );
 ```
