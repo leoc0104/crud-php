@@ -1,6 +1,6 @@
 # Simple PHP CRUD Application
 
-It is a project from *Laboratory III* subject that is required on Database College at Fatec Bauru. This is a dictionary with words from some subjects: *Data Structures, Statistics and Fundamentals of Networks*.
+It is a project for the *Laboratory III* subject required in the Database program at Fatec Bauru. This project is a dictionary containing words from the following subjects: *Data Structures, Statistics, and Fundamentals of Networks*.
 
 ## Features
 
