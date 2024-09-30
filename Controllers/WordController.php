@@ -30,7 +30,7 @@ class WordController {
 
     public function show($id) {
         $word = $this->word->read($id);
-        
+
         header('Content-Type: application/json');
         echo json_encode($word);
     }
@@ -51,10 +51,10 @@ class WordController {
 
             if ($this->word->create()) {
                 header('Content-Type: application/json');
-                echo json_encode(['message' => 'Product created']);
+                echo json_encode(['message' => 'Word created']);
             } else {
                 header('Content-Type: application/json');
-                echo json_encode(['message' => 'Product not created']);
+                echo json_encode(['message' => 'Word has not been created']);
             }
         } else {
             header('Content-Type: application/json');
