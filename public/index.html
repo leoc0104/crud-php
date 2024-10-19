@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário de Palavras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dicionário de Palavras</h1>
+
+        <h3>CREATE</h3>
+
+        <form id="add-word-form">
+            <input type="text" id="name" placeholder="Insira a palavra" required>
+            <input type="text" id="translation" placeholder="Insira sua tradução" required>
+            <input type="text" id="subject" placeholder="Insira a matéria aplicada" required>
+            <input type="text" id="context_applied" placeholder="Insira seu contexto" required>
+            <button type="submit">Inserir</button>
+        </form>
+
+        <h3>READ</h3>
+        
+        <button id="list-words">Listar todas as palavras</button>
+        <div id="word-list"></div>
+
+        <h3>UPDATE</h3>
+
+        <form id="update-word-form">
+            <input type="text" id="update-id" placeholder="ID da palavra que deseja editar" required>
+            <input type="text" id="new-name" placeholder="Nova palavra" required>
+            <input type="text" id="new-translation" placeholder="Nova tradução" required>
+            <input type="text" id="new-subject" placeholder="Nova matéria aplicada" required>
+            <input type="text" id="context_applied" placeholder="Novo contexto" required>
+            <button type="submit">Atualizar</button>
+        </form>
+
+        <h3>DELETE</h3>
+
+        <form id="delete-word-form">
+            <input type="text" id="delete-id" placeholder="ID da palavra para remover" required>
+            <button type="submit">Remover</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
