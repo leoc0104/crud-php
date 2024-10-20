@@ -76,7 +76,7 @@ class WordController {
             $this->word->subject = $data->subject;
             $this->word->context_applied = $data->context_applied;
 
-            if ($this->word->update()) {
+            if ($this->word->update($id)) {
                 header('Content-Type: application/json');
                 echo json_encode(['message' => 'Word updated']);
             } else {

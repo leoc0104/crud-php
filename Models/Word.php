@@ -56,8 +56,8 @@ class Word {
         return false;
     }
 
-    public function update() {
-        $query = "UPDATE " . $this->table . " SET name=:name, translation=:translation, subject=:subject, context_applied=:context_applied";
+    public function update($id) {
+        $query = "UPDATE " . $this->table . " SET name=:name, translation=:translation, subject=:subject, context_applied=:context_applied WHERE id = ". $id;
         $stmt = $this->conn->prepare($query);
 
         $this->name = htmlspecialchars(strip_tags($this->name));
