@@ -24,7 +24,10 @@ It is a project for the *Laboratory III* subject required in the Database progra
  ┣ 📂 Controllers     # Contains the logic for handling requests and responses
  ┣ 📂 Models          # Contains the data structures and database interactions
  ┣ 📂 public          # Publicly accessible files
- ┃ ┗ 📄 index.php     # Main entry point for the application
+ ┃ ┣ 📄 app.js        # JavaScript file for client-side interactions
+ ┃ ┣ 📄 index.html    # A static HTML file, serving as a fallback or example
+ ┃ ┣ 📄 index.php     # Main entry point for the PHP application
+ ┃ ┗ 📄 styles.css    # CSS file for styling the HTML pages
  ┣ 📂 routes          # Defines the routes and their corresponding controllers
  ┣ 📂 vendor          # Composer dependencies
  ┣ 📄 .env           # Environment variables for configuration
